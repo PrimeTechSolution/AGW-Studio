@@ -223,6 +223,7 @@ hr { border-top: 4px solid #CCC; }
     display: flex;
     align-items: center;
     justify-content: center;
+	border-radius: 20%;
 }
 
 .tm-text-container { max-width: 97%; }
@@ -661,7 +662,7 @@ select:not([multiple]) {
 	display: block;
 }
 
-.tm-copyright { padding: 50px 70px 20px 0; }
+.tm-copyright { padding: 20px 30px 20px 0; }
 
 @media (max-width: 1400px) {
 	.tm-section-wrap {
