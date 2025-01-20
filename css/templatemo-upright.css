@@ -105,6 +105,24 @@ hr { border-top: 4px solid #CCC; }
     left: -470px;
     top: 0;
 }
+.tm-parallax img {
+	object-fit: cover;
+    width: 100%;
+    /* min-height: 100%; */
+	height: 1300px;
+	
+}
+
+/* Responsive */
+
+@media screen and (max-width: 992px) {
+    .tm-parallax img {
+		object-fit: cover;
+		width: 100%;
+		/* min-height: 100%; */
+		height: 100%;
+	}
+}
 
 /* Hide scrollbar */
 .tm-sidebar {

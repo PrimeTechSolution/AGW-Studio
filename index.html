@@ -68,7 +68,12 @@
             <div class="tm-main">
                 <!-- Home section -->
                 <div class="tm-section-wrap">
-                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-06.jpg"></div>                   
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="">
+                            <img class="mySlides" src="img/photo_2025-01-19_19-08-23.jpg">
+                            <img class="mySlides" src="img/photo_2025-01-19_19-09-17.jpg">
+                            <img class="mySlides" src="img/photo_2025-01-19_19-09-25.jpg">
+                            <img class="mySlides" src="img/photo_2025-01-19_19-09-15 (3).jpg">
+                    </div>                   
                     <section id="home" class="tm-section">
                         <h2 class="tm-text-primary">AGW Studio</h2>
                         <h3 class="tm-text-secondary">Architecting Great Work</h3>
@@ -547,7 +552,7 @@
             
                                 <!-- Address -->
                                 <address class="mb-4">
-                                    Head Office : Uncle K Ariyo Curtain Store,<br>Aleshinloye Market, Jericho, Ibadan.<br>
+                                    Head Office : Beside Uncle K Ariyo Curtain Store,<br>Aleshinloye, Jericho, Ibadan.<br>
                                     Branch Office : No 23 Mosorire street Sanyo area Ibadan.
                                 </address>
             
@@ -596,5 +601,21 @@
     <script src="js/jquery.magnific-popup.min.js"></script> 
     <script src="slick/slick.min.js"></script>              
     <script src="js/templatemo-script.js"></script>
+    <script>
+        var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+    </script>
 </body>
 </html> 
