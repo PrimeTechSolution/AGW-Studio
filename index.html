@@ -517,28 +517,28 @@
                         <hr class="mb-5">
                         <div class="row">
                             <div class="col-xl-6 tm-contact-col-l mb-4">
-                                <form id="contact-form" action="mailto:abdulganiyyabdulwaris306@gmail.com" method="POST" enctype="text/plain" class="tm-contact-form">
-                                    <div class="form-group">
-                                        <input type="text" name="name" class="form-control rounded-0" placeholder="Name" required />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" name="email" class="form-control rounded-0" placeholder="Email" required />
-                                    </div>
-                                    <div class="form-group">
-                                        <select class="form-control" id="contact-select" name="inquiry">
-                                            <option value="-">Subject</option>
-                                            <option value="sales">Architectural Design</option>
-                                            <option value="creative">Project Management</option>
-                                            <option value="uiux">Development Consultancy</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea rows="8" name="message" class="form-control rounded-0" placeholder="Message" required=></textarea>
-                                    </div>
-            
-                                    <div class="form-group tm-text-right">
-                                        <button type="submit" class="btn btn-primary">Send</button>
-                                    </div>
+                                <form id="contact-form"  action="" class="tm-contact-form">
+                                    <div class="form-group">
+                                        <input type="text" id="name" name="name" class="form-control rounded-0" placeholder="Name" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" id="email" name="email" class="form-control rounded-0" placeholder="Email" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" id="contact-select" name="inquiry">
+                                            <option value="-">Subject</option>
+                                            <option value="sales">Architectural Design</option>
+                                            <option value="creative">Project Management</option>
+                                            <option value="uiux">Development Consultancy</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea rows="8" id="message" name="message" class="form-control rounded-0" placeholder="Message" required=></textarea>
+                                    </div>
+            
+                                    <div class="form-group tm-text-right">
+                                        <button type="submit" onclick="sendToWhatsapp()" class="btn btn-primary">Send</button>
+                                    </div>
                                 </form>
                             </div>
                             <div class="col-xl-6 tm-contact-col-r">
@@ -552,7 +552,7 @@
             
                                 <!-- Address -->
                                 <address class="mb-4">
-                                    Head Office : Beside Uncle K Ariyo Curtain Store,<br>Aleshinloye, Jericho, Ibadan.<br>
+                                    Head Office : Beside Uncle K Ariyo Curtain Store,Aleshinloye, Jericho, Ibadan.<br>
                                     Branch Office : No 23 Mosorire street Sanyo area Ibadan.
                                 </address>
             
@@ -616,6 +616,23 @@ function carousel() {
   x[slideIndex-1].style.display = "block";
   setTimeout(carousel, 3000); // Change image every 3 seconds
 }
+        // send form messages to whatsapp
+function sendToWhatsapp(){
+  let number = "+2348103254271";
+
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+    let inquiry = document.getElementById('contact-select').value;
+  let message = document.getElementById('message').value;
+
+  var url = "https://wa.me/" + number + "?text="
+  + "Name : " +name+ "%0a"
+  + "Email : " +email+ "%0a"
+    + "Inquiry : " + inquiry+ "%0a"
+  + "Message : " +message+ "%0a%0a";
+
+  window.open(url, '_blank').focus();
+      }
     </script>
 </body>
 </html> 
